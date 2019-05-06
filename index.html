@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="Shortcut Icon " href="./static/ico/favicon.ico">
+  <link rel="stylesheet" href="./static/css/reset.css">
+  <script>
+    // document.oncontextmenu=function(){return false;}; 
+    document.onselectstart=function(){return false;};
+    function IsPC() {
+      let userAgentInfo = navigator.userAgent;
+      let Agents = ["Android", "iPhone",
+        "SymbianOS", "Windows Phone",
+        "iPad", "iPod"];
+      let flag = true;
+      for (let v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+          flag = false;
+          break;
+        }
+      }
+      return flag;
+    }
+    let flag = IsPC();
+    localStorage.setItem('flag', JSON.stringify(flag))
+  </script>
+  <style>
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    ::-webkit-scrollbar {
+      width:0;height:1px
+    }
+    ::-webkit-scrollbar-thumb {
+      border-radius:5px;
+      -webkit-box-shadow:inset 0 0 5px rgba(0,0,0,.2);
+      background:rgba(0,0,0,.2)
+    }
+  </style>
+</head>
+
+<body ondragstart="return false;">
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
+</html>
