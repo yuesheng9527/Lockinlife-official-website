@@ -3,13 +3,16 @@
     <div id="ai1" v-if="!$store.state.tag">
       <van-popup class="van-popup" v-model="show">
         <ul>
-          <li style="margin-top:15%;" @click="$router.push({ path: '/index.html'})">首页</li>
+          <li style="color:#ffaea0; margin-top:15%;" @click="$router.push({ path: '/index.html'})">首页</li>
           <li @click="$router.push({ path: '/advantage.html'})">产品优势</li>
           <li @click="$router.push({ path: '/technology.html'})">核心科技</li>
           <li @click="$router.push({ path: '/front.html'})">项目前景</li>
           <li @click="$router.push({ path: '/recruit.html'})">招募伙伴</li>
           <li @click="$router.push({ path: '/profile.html'})">关于我们</li>
-          <li @click="fullScreen()">全屏显示</li>
+          <li>
+            <img @click="exitScreen()" style="width:70px;margin-right:80px;" src="../images/AK-LN全屏退出.png" alt="">
+            <img @click="fullScreen()" style="width:70px;" src="../images/AK-LN全屏.png" alt="">
+          </li>
         </ul>
       </van-popup>
       <div id="index_div">
@@ -428,6 +431,23 @@ export default {
       }
       return;
     },
+    exitScreen(){
+      if (document.exitFullscreen) { 
+        document.exitFullscreen(); 
+      } 
+      else if (document.mozCancelFullScreen) { 
+        document.mozCancelFullScreen(); 
+      } 
+      else if (document.webkitCancelFullScreen) { 
+        document.webkitCancelFullScreen(); 
+      } 
+      else if (document.msExitFullscreen) { 
+        document.msExitFullscreen(); 
+      }
+      if(typeof cfs != "undefined" && cfs) {
+        cfs.call(el);
+      }
+    },
     do1() {
       if (!this.$store.state.tag) {
         let pw = new pageSwitch("index_div", {
@@ -465,6 +485,7 @@ export default {
           autoplay: false, //bool 是否自动播放幻灯 新增
           interval: 0 //bool 幻灯播放时间间隔 新增
         });
+        pw.prev();
         let a = document.getElementsByClassName("next");
         for (let i = 0; i < a.length; i++) {
           a[i].addEventListener("click", () => {
@@ -830,9 +851,6 @@ export default {
   width: 100%;
   height: 100%;
   #index_div10 {
-    white-space: nowrap;
-    min-width: 1280px;
-    min-height: 768px;
     width: 100%;
     height: 100%;
     background-color: #5b9bfe;
@@ -877,6 +895,7 @@ export default {
         justify-content: flex-end;
         img{
           height: 95%;
+          max-height: 1000px;
         }
       }
       .header3 {
