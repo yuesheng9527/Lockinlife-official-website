@@ -416,6 +416,14 @@ export default {
     $("title").html("锁生活 首页");
     this.do1();
     this.do2();
+    if(!this.$store.state.tag){
+      document.webkitIsFullScreen
+      $(window).resize(function(){
+        if(`${document.documentElement.clientHeight}`<`${document.documentElement.scrollHeight}`){
+
+        }
+      });
+    }
   },
   methods: {
     click(){this.show=true},
