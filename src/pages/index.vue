@@ -9,9 +9,9 @@
           <li @click="$router.push({ path: '/front.html'})">项目前景</li>
           <li @click="$router.push({ path: '/recruit.html'})">招募伙伴</li>
           <li @click="$router.push({ path: '/profile.html'})">关于我们</li>
-          <li>
-            <img @click="exitScreen()" style="width:70px;margin-right:80px;" src="../images/AK-LN全屏退出.png" alt="">
-            <img @click="fullScreen()" style="width:70px;" src="../images/AK-LN全屏.png" alt="">
+          <li style="text-align:center;">
+            <img @click="exitScreen()" style="width:15%;margin-right:15%;" src="../images/AK-LN全屏退出.png" alt="">
+            <img @click="fullScreen()" style="width:15%;" src="../images/AK-LN全屏.png" alt="">
           </li>
         </ul>
       </van-popup>
