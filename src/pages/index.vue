@@ -3,22 +3,37 @@
     <div id="ai1" v-if="!$store.state.tag">
       <van-popup class="van-popup" v-model="show">
         <ul>
-          <li style="color:#ffaea0; margin-top:15%;" @click="$router.push({ path: '/index.html'})">首页</li>
+          <li
+            style="color:#ffaea0; margin-top:15%;"
+            @click="$router.push({ path: '/index.html'})"
+          >首页</li>
           <li @click="$router.push({ path: '/advantage.html'})">产品优势</li>
           <li @click="$router.push({ path: '/technology.html'})">核心科技</li>
           <li @click="$router.push({ path: '/front.html'})">项目前景</li>
           <li @click="$router.push({ path: '/recruit.html'})">招募伙伴</li>
           <li @click="$router.push({ path: '/profile.html'})">关于我们</li>
           <li style="text-align:center;">
-            <img @click="exitScreen()" style="width:15%;margin-right:15%;" src="../images/AK-LN全屏退出.png" alt="">
-            <img @click="fullScreen()" style="width:15%;" src="../images/AK-LN全屏.png" alt="">
+            <img
+              @click="exitScreen()"
+              style="width:15%;margin-right:15%;"
+              src="../images/AK-LN全屏退出.png"
+              alt
+            >
+            <img @click="fullScreen()" style="width:15%;" src="../images/AK-LN全屏.png" alt>
           </li>
         </ul>
       </van-popup>
       <div id="index_div">
         <div class="index_div1">
           <div class="header">
-            <img src="../images/logo.png"><van-icon name="wap-nav" @click="click" size="0.65rem" color="white" style="margin: 0px 7px 0px auto;"/>
+            <img src="../images/logo.png">
+            <van-icon
+              name="wap-nav"
+              @click="click"
+              size="0.65rem"
+              color="white"
+              style="margin: 0px 7px 0px auto;"
+            />
           </div>
           <div class="header2">
             <img src="../images/图层-4.png" class="index_img3">
@@ -56,7 +71,14 @@
         </div>
         <div class="index_div20">
           <div class="header">
-            <img src="../images/logo2.png"><van-icon name="wap-nav" @click="click" size="0.65rem" color="#5B9BFE" style="margin: 0px 7px 0px auto;"/>
+            <img src="../images/logo2.png">
+            <van-icon
+              name="wap-nav"
+              @click="click"
+              size="0.65rem"
+              color="#5B9BFE"
+              style="margin: 0px 7px 0px auto;"
+            />
           </div>
           <div class="header2">
             <div class="div1">
@@ -110,7 +132,14 @@
         </div>
         <div class="index_div30">
           <div class="header">
-            <img src="../images/logo.png"><van-icon name="wap-nav" @click="click" size="0.65rem" color="white" style="margin: 0px 7px 0px auto;"/>
+            <img src="../images/logo.png">
+            <van-icon
+              name="wap-nav"
+              @click="click"
+              size="0.65rem"
+              color="white"
+              style="margin: 0px 7px 0px auto;"
+            />
           </div>
           <div class="header2">
             <div class="div2">
@@ -142,7 +171,14 @@
         </div>
         <div class="index_div40">
           <div class="header">
-            <img src="../images/logo2.png"><van-icon name="wap-nav" @click="click" size="0.65rem" color="white" style="margin: 0px 7px 0px auto;"/>
+            <img src="../images/logo2.png">
+            <van-icon
+              name="wap-nav"
+              @click="click"
+              size="0.65rem"
+              color="white"
+              style="margin: 0px 7px 0px auto;"
+            />
           </div>
           <div class="header2">
             <p>关于锁生活</p>
@@ -258,7 +294,7 @@
               <img src="../images/share2.png" alt class="img2000">
             </center>
             <div class="div10">
-              <div style="">
+              <div style>
                 <ul>
                   <li>便捷</li>
                   <li>CONVENIENT</li>
@@ -409,24 +445,18 @@ let pageSwitch = require("pageswitch");
 export default {
   data() {
     return {
-      show:false
+      show: false
     };
   },
   mounted() {
     $("title").html("锁生活 首页");
     this.do1();
     this.do2();
-    if(!this.$store.state.tag){
-      document.webkitIsFullScreen
-      $(window).resize(function(){
-        if(`${document.documentElement.clientHeight}`<`${document.documentElement.scrollHeight}`){
-
-        }
-      });
-    }
   },
   methods: {
-    click(){this.show=true},
+    click() {
+      this.show = true;
+    },
     fullScreen() {
       var el = document.documentElement;
       var rfs =
@@ -439,20 +469,17 @@ export default {
       }
       return;
     },
-    exitScreen(){
-      if (document.exitFullscreen) { 
-        document.exitFullscreen(); 
-      } 
-      else if (document.mozCancelFullScreen) { 
-        document.mozCancelFullScreen(); 
-      } 
-      else if (document.webkitCancelFullScreen) { 
-        document.webkitCancelFullScreen(); 
-      } 
-      else if (document.msExitFullscreen) { 
-        document.msExitFullscreen(); 
+    exitScreen() {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else if (document.webkitCancelFullScreen) {
+        document.webkitCancelFullScreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
       }
-      if(typeof cfs != "undefined" && cfs) {
+      if (typeof cfs != "undefined" && cfs) {
         cfs.call(el);
       }
     },
@@ -502,19 +529,20 @@ export default {
         }
       }
     },
-    do2(){
-      if(this.$store.state.tag){
+    do2() {
+      if (this.$store.state.tag) {
         var i = document.getElementsByTagName("meta");
-        i[1]["content"] = "width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui";
+        i[1]["content"] =
+          "width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui";
       }
     }
-  },
+  }
 };
 </script>
 
 <style lang="scss">
-:root{
-  --y:1px;
+:root {
+  --y: 1px;
 }
 #ai,
 #ai1,
@@ -522,19 +550,19 @@ export default {
   width: 100%;
   height: 100%;
 }
-#ai1{
-  .van-popup{
-    width:60%;
-    height:80%;
-    border-radius:0.7rem;
-    background-color:#5B9BFE;
-    ul{
-      height:100%;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      li{
+#ai1 {
+  .van-popup {
+    width: 60%;
+    height: 80%;
+    border-radius: 0.7rem;
+    background-color: #5b9bfe;
+    ul {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      li {
         color: white;
         margin-bottom: 15%;
         font-size: 35px;
@@ -852,9 +880,6 @@ export default {
   }
 }
 
-
-
-
 #index_div20 {
   width: 100%;
   height: 100%;
@@ -901,7 +926,7 @@ export default {
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
-        img{
+        img {
           height: 95%;
           max-height: 1000px;
         }
@@ -1009,7 +1034,7 @@ export default {
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      .img2000{
+      .img2000 {
         width: 1280px;
         margin-top: 30px;
       }
