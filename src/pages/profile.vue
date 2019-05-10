@@ -332,6 +332,7 @@ export default {
 }
 #ad1 {
   #advantage {
+    background-color: #ffffff;
     .header {
       height: 7%;
       border-bottom: 1px solid #31c7a9;
