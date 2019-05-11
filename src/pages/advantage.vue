@@ -357,7 +357,7 @@ export default {
 
 <style lang="scss" scoped>
 #ad,
-
+#ad1,
 #ad2 {
   width: 100%;
   height: 100%;
@@ -382,7 +382,7 @@ export default {
 }
 #ad1 {
   #advantage {
-    background-color: #ffffff;
+    background-color: white;
     .header {
       height: 7%;
       border-bottom: 1px solid #31c7a9;
