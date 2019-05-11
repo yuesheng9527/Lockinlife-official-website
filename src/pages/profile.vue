@@ -95,7 +95,7 @@
           </div>
           <p class="p100123" style="margin-top:80px;">
             <span>合作伙伴</span>
-            <span>&nbsp; /Partner</span>
+            <span>/Partner</span>
           </p>
           <div class="header1030">
             <ul class="ul1">
