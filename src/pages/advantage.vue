@@ -357,7 +357,7 @@ export default {
 
 <style lang="scss" scoped>
 #ad,
-#ad1,
+
 #ad2 {
   width: 100%;
   height: 100%;
