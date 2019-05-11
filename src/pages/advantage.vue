@@ -116,7 +116,7 @@
                 <span class="span111"></span>
                 <span class="span001">时间限制</span>
               </p>
-              <p style="display:flex;transform: translateX(0px);color:#333333;margin-bottom:150px;">
+              <p style="display:flex;transform: translateX(0px);color:#333333;margin-bottom:80px;">
                 <span class="span112 span003">用户无需等待，有空闲状态的锁具自助式使用，可做到即存即取</span>
                 <span class="span112 span002">存储时间往往数小时起步，短时间临时寄存刚需大但仍属市场空白</span>
               </p>
@@ -357,7 +357,6 @@ export default {
 
 <style lang="scss" scoped>
 #ad,
-#ad1,
 #ad2 {
   width: 100%;
   height: 100%;
@@ -382,7 +381,7 @@ export default {
 }
 #ad1 {
   #advantage {
-    background-color: white;
+    background-color: #ffffff;
     .header {
       height: 7%;
       border-bottom: 1px solid #31c7a9;
@@ -399,7 +398,7 @@ export default {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-right: 150px;
+      margin: 80px 150px 60px 0;
       :nth-child(1) {
         font-size: 37px;
         font-weight: 700;
@@ -552,7 +551,7 @@ export default {
     }
     .header3 {
       background-color: #cbc4bf;
-      height: 28%;
+      height: 411px;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
