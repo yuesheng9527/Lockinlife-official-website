@@ -226,7 +226,6 @@ export default {
 
 <style lang="scss" scoped>
 #ad,
-#ad1,
 #ad2 {
   width: 100%;
   height: 100%;
@@ -320,7 +319,7 @@ export default {
 
     .header3 {
       background-color: #cbc4bf;
-      height: 28%;
+      height: 411px;
       display: flex;
       flex-direction: column;
       justify-content: space-around;

@@ -1,5 +1,4 @@
-#这是一个牛逼的项目  
-# gshop
+#公司官网自适应pc和移动端  
 
 > A Vue.js project
 
