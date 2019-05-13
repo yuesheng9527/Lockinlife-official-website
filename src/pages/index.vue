@@ -499,6 +499,7 @@ export default {
           autoplay: false, //bool 是否自动播放幻灯 新增
           interval: 0 //bool 幻灯播放时间间隔 新增
         });
+        pw.prev();
         let a = document.getElementsByClassName("next");
         for (let i = 0; i < a.length; i++) {
           a[i].addEventListener("click", () => {
