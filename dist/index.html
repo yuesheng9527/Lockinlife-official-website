@@ -15,21 +15,15 @@
       return flag;
     }
     let flag = IsPC();
-    localStorage.setItem('flag', JSON.stringify(flag))</script><script>document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-      WeixinJSBridge.call('hideToolbar');
-    });</script><script>let flag = JSON.parse(localStorage.getItem('flag'))
+    localStorage.setItem('flag', JSON.stringify(flag))</script><script>let flag = JSON.parse(localStorage.getItem('flag'))
     if(!flag){
-    let u = navigator.userAgent;
-    let isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
-    let isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-		//alert('是否是Android：'+isAndroid);
-		//alert('是否是iOS：'+isiOS);
-		if(isAndroid) {
-			window.history.pushState({}, "title", "#");
-    } 
-    if(isiOS) {
-			window.history.pushState({}, "title", "#");
-    }
+      //判断设备是android还是ios
+      let u = navigator.userAgent, app = navigator.appVersion; 
+      let isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器 
+      let isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端 
+      if(isiOS){
+        window.history.pushState({}, "title", "#");
+      }
     }</script><style>::-webkit-scrollbar {
       display: none;
     }
@@ -40,4 +34,4 @@
       border-radius:5px;
       -webkit-box-shadow:inset 0 0 5px rgba(0,0,0,.2);
       background:rgba(0,0,0,.2)
-    }</style><link href=./static/css/app.00997d4028e0eedd43a40df4cf5abb37.css rel=stylesheet></head><body ondragstart="return false;"><div id=app></div><script type=text/javascript src=./static/js/manifest.c671b31a6294c60d458b.js></script><script type=text/javascript src=./static/js/app.fdbd48961b10f25db44e.js></script></body></html>
+    }</style><link href=./static/css/app.f07ac4bfc134ce15733e7eab418021cf.css rel=stylesheet></head><body ondragstart="return false;"><div id=app></div><script type=text/javascript src=./static/js/manifest.c671b31a6294c60d458b.js></script><script type=text/javascript src=./static/js/app.3e28ea1f76e22ea04c68.js></script></body></html>
