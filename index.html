@@ -25,6 +25,7 @@
     }
     let flag = IsPC();
     localStorage.setItem('flag', JSON.stringify(flag));
+    window.history.pushState(null,null, '');
     if(!flag){
       let isIOS= !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
       if(isIOS){
