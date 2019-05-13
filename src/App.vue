@@ -12,45 +12,28 @@
 <script>
 export default {
   created() {
-    if (!this.$store.state.tag) {
-      let isIOS = !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-      console.log(isIOS);
-      if (isIOS) {
-        // window.history.pushState(null,null, '');
-        a();
-        function a () {
-          pushHistory();
-          window.addEventListener(
-            "popstate",
-            function(e) {
-              WeixinJSBridge.invoke("closeWindow", {}, function(res) {});
-            },
-            false
-          );
-
-          function pushHistory() {
-            var state = {
-              title: "title",
-              url: "#"
-            };
-            window.history.pushState(state, "title", "#");
-          }
-        }
+    if(!this.$store.state.tag){
+      let isIOS= !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
+      if(isIOS){
+        window.history.pushState(null,null, '');
       }
     }
   },
   mounted() {
-    if (this.$store.state.tag) {
-      document.getElementById("agg").style.minWidth = "1280px";
-      document.getElementById("agg").style.minHeight = "768px";
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+    WeixinJSBridge.call('hideToolbar');        // 隐藏底部状态栏
+    WeixinJSBridge.call('hideOptionMenu');     // 隐藏右上角的三个点的选项
+});
+    if(this.$store.state.tag){
+      document.getElementById("agg").style.minWidth="1280px";
+      document.getElementById("agg").style.minHeight="768px";
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-#app2,
-#agg {
+#app2,#agg {
   width: 100%;
   height: 100%;
   background-color: #f5efeff1;
