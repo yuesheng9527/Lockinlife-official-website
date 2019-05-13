@@ -16,15 +16,6 @@ export default {
       document.getElementById("agg").style.minWidth="1280px";
       document.getElementById("agg").style.minHeight="768px";
     }
-    if(!this.$store.state.tag){
-      //判断设备是android还是ios
-      let u = navigator.userAgent, app = navigator.appVersion; 
-      let isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器 
-      let isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端 
-      if(isiOS){
-        window.history.pushState({}, "title", "#");
-      }
-    }
   }
 };
 </script>
