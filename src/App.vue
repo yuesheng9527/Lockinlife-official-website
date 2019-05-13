@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  mounted() {
+  created() {
     if(!this.$store.state.tag){
       let isIOS= !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
       if(isIOS){
@@ -21,6 +21,8 @@ export default {
         window.history.pushState(null,null, '');
       }
     }
+  },
+  mounted() {
     if(this.$store.state.tag){
       document.getElementById("agg").style.minWidth="1280px";
       document.getElementById("agg").style.minHeight="768px";
