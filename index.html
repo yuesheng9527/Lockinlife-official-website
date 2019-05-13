@@ -24,15 +24,12 @@
       return flag;
     }
     let flag = IsPC();
-    localStorage.setItem('flag', JSON.stringify(flag))
-    window.history.pushState({}, "title", "#");
+    localStorage.setItem('flag', JSON.stringify(flag));
+    window.history.pushState({}, "锁生活 首页", "#");
     if(!flag){
-      //判断设备是android还是ios
-      let u = navigator.userAgent, app = navigator.appVersion; 
-      let isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器 
-      let isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端 
-      if(isiOS){
-        window.history.pushState({}, "title", "#");
+      let isIOS= !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
+      if(isIOS){
+        window.history.pushState({}, "锁生活 首页", "#");
       }
     }
   </script>
