@@ -12,18 +12,14 @@
 <script>
 export default {
   created() {
-    // if(!this.$store.state.tag){
-    //   let isIOS= !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
-    //   if(isIOS){
-    //     window.history.pushState(null,null, '');
-    //   }
-    // }
+    if(!this.$store.state.tag){
+      let isIOS= !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
+      if(isIOS){
+        window.history.pushState(null,null, '');
+      }
+    }
   },
   mounted() {
-        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-    WeixinJSBridge.call('hideToolbar');        // 隐藏底部状态栏
-    WeixinJSBridge.call('hideOptionMenu');     // 隐藏右上角的三个点的选项
-});
     if(this.$store.state.tag){
       document.getElementById("agg").style.minWidth="1280px";
       document.getElementById("agg").style.minHeight="768px";
