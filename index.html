@@ -25,11 +25,10 @@
     }
     let flag = IsPC();
     localStorage.setItem('flag', JSON.stringify(flag));
-    window.history.pushState({}, "锁生活 首页", "#");
     if(!flag){
       let isIOS= !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
       if(isIOS){
-        window.history.pushState({}, "锁生活 首页", "#");
+        window.history.pushState(null,null, '');
       }
     }
   </script>
