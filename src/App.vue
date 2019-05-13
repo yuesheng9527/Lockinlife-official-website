@@ -12,12 +12,12 @@
 <script>
 export default {
   created() {
-    if(!this.$store.state.tag){
-      let isIOS= !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
-      if(isIOS){
-        window.history.pushState(null,null, '');
-      }
-    }
+    // if(!this.$store.state.tag){
+    //   let isIOS= !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
+    //   if(isIOS){
+    //     window.history.pushState(null,null, '');
+    //   }
+    // }
   },
   mounted() {
         document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
