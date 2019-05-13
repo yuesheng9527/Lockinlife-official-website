@@ -20,7 +20,7 @@
           </li>
         </ul>
       </van-popup>
-      <div id="advantage">
+      <div id="advantage555">
         <div class="header">
           <img src="../images/logo2.png">
           <van-icon
@@ -239,8 +239,8 @@ export default {
   }
 }
 #ad1 {
-  #advantage {
-    background-color: #ffffff;
+  #advantage555 {
+    background-color: white;
     .header {
       height: 7%;
       border-bottom: 1px solid #31c7a9;
@@ -327,7 +327,6 @@ export default {
 }
 #advantage {
   height: 100%;
-  background-color: #efefef;
   background-color: #ffffff;
   .header {
     height: 118px;

@@ -14,6 +14,7 @@ export default {
   created() {
     if(!this.$store.state.tag){
       let isIOS= !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
+      console.log(isIOS)
       if(isIOS){
         window.history.pushState(null,null, '');
         window.history.pushState(null,null, '');
