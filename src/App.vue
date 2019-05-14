@@ -19,7 +19,7 @@ export default {
         setTimeout(()=> {
           let iosWXH = document.documentElement.clientHeight;
           $('body').css({'height':iosWXH});
-        },20)
+        },2000)
       }
     }
     if(this.$store.state.tag){
