@@ -9,15 +9,6 @@
           <li style="color:#ffaea0;" @click="$router.push({ path: '/front.html'})">项目前景</li>
           <li @click="$router.push({ path: '/recruit.html'})">招募伙伴</li>
           <li @click="$router.push({ path: '/profile.html'})">关于我们</li>
-          <li style="text-align:center;">
-            <img
-              @click="exitScreen()"
-              style="width:15%;margin-right:15%;"
-              src="../images/AK-LN全屏退出.png"
-              alt
-            >
-            <img @click="fullScreen()" style="width:15%;" src="../images/AK-LN全屏.png" alt>
-          </li>
         </ul>
       </van-popup>
       <div id="advantage">
@@ -223,7 +214,7 @@ export default {
   #advantage {
     background-color: #ffffff;
     .header {
-      height: 7%;
+      height: 91px;
       border-bottom: 1px solid #31c7a9;
       display: flex;
       align-items: center;

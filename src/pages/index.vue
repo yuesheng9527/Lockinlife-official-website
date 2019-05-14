@@ -12,15 +12,6 @@
           <li @click="$router.push({ path: '/front.html'})">项目前景</li>
           <li @click="$router.push({ path: '/recruit.html'})">招募伙伴</li>
           <li @click="$router.push({ path: '/profile.html'})">关于我们</li>
-          <li style="text-align:center;">
-            <img
-              @click="exitScreen()"
-              style="width:15%;margin-right:15%;"
-              src="../images/AK-LN全屏退出.png"
-              alt
-            >
-            <img @click="fullScreen()" style="width:15%;" src="../images/AK-LN全屏.png" alt>
-          </li>
         </ul>
       </van-popup>
       <div id="index_div">
@@ -63,9 +54,6 @@
                   <p>SECURITY</p>
                 </div>
               </div>
-            </div>
-            <div class="index_div10">
-              <img src="../images/返回.png" class="next">
             </div>
           </div>
         </div>
@@ -127,7 +115,6 @@
                 </ul>
               </div>
             </div>
-            <img src="../images/返回2.png" alt class="next">
           </div>
         </div>
         <div class="index_div30">
@@ -166,7 +153,6 @@
               <p class="p2">资本投入现金收益回流快，属于少投入大回报。</p>
               <p class="p3">相比其他共享经济类产品我们起步更快，资产更轻，运营更灵活。</p>
             </div>
-            <img src="../images/返回.png" alt class="next">
           </div>
         </div>
         <div class="index_div40">
@@ -489,7 +475,7 @@ export default {
           duration: 1000, //int 页面过渡时间
           direction: 0, //int 页面切换方向，0横向，1纵向
           start: 0, //int 默认显示页面
-          loop: false, //bool 是否循环切换
+          loop: true, //bool 是否循环切换
           ease: "ease", //string|function 过渡曲线动画，详见下方说明
           transition: "flip3dY", //string|function转场方式，详见下方说明
           freeze: false, //bool 是否冻结页面（冻结后不可响应用户操作，可以通过 `.freeze(false)` 方法来解冻）
@@ -580,7 +566,7 @@ export default {
   height: 100%;
   background-color: #5b9bfe;
   .header {
-    height: 7%;
+    height: 91px;
     border-bottom: 1px solid #a7cefd;
     display: flex;
     align-items: center;
@@ -669,7 +655,7 @@ export default {
   height: 100%;
   background-color: #d9f9ff;
   .header {
-    height: 7%;
+    height: 91px;
     border-bottom: 1px solid #31c7a9;
     display: flex;
     align-items: center;
@@ -762,7 +748,7 @@ export default {
   height: 100%;
   background-color: #ff7b5c;
   .header {
-    height: 7%;
+    height: 91px;
     border-bottom: 1px solid #ffaea0;
     display: flex;
     align-items: center;
@@ -818,7 +804,7 @@ export default {
   height: 100%;
   background-color: #cbc4bf;
   .header {
-    height: 7%;
+    height: 91px;
     border-bottom: 1px solid #ebeae7;
     display: flex;
     align-items: center;

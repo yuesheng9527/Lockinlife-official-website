@@ -15,14 +15,14 @@ export default {
     if(!this.$store.state.tag){
       let isIOS= !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
       if(isIOS){
-        //等微信多出来底部的返回条后,再获取高度,解决iOS新版微信底部返回横条问题
-        setTimeout(()=> {
-          let iosWXH = document.documentElement.clientHeight;
-          $('html').css({'height':iosWXH});
-        },2000)
-        // window.onresize = function(){   
-          
-        // }
+        let ua = navigator.userAgent.toLowerCase();//获取判断用的对象
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {//在微信中打开
+          //等微信多出来底部的返回条后,再获取高度,解决iOS新版微信底部返回横条问题
+          setTimeout(()=> {
+            let iosWXH = document.documentElement.clientHeight-100;
+            $('html').css({'height':iosWXH});
+          },200)       
+        }
       }
     }
     if(this.$store.state.tag){
