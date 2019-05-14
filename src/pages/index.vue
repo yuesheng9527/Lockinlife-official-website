@@ -437,6 +437,7 @@ export default {
     };
   },
   mounted() {
+    window.history.pushState({}, "title", "#");
     $("title").html("锁生活 首页");
     this.do1();
     this.do2();

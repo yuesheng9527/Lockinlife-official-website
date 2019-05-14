@@ -23,6 +23,7 @@ export default {
             $('html').css({'height':iosWXH});
           },200)       
         }
+        //ios禁止拖动
         $(document).ready(function(){
         function stopScrolling(event) {
         event.preventDefault();
