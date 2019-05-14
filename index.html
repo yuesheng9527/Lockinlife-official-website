@@ -25,10 +25,6 @@
     }
     let flag = IsPC();
     localStorage.setItem('flag', JSON.stringify(flag));
-    document.body.addEventListener('touchmove', function(e) {
-      e.stopPropagation();
-      e.preventDefault();
-    });
   </script>
   <style>
     ::-webkit-scrollbar {

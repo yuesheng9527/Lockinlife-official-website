@@ -23,6 +23,12 @@ export default {
             $('html').css({'height':iosWXH});
           },200)       
         }
+        $(document).ready(function(){
+        function stopScrolling(event) {
+        event.preventDefault();
+        }
+        document.addEventListener('touchmove',stopScrolling,false);
+        })
       }
     }
     if(this.$store.state.tag){
