@@ -17,9 +17,9 @@ export default {
       if(isIOS){
         //等微信多出来底部的返回条后,再获取高度,解决iOS新版微信底部返回横条问题
         setTimeout(()=> {
-          let iosWXH = document.documentElement.clientHeight;
+          let iosWXH = 0.9*document.documentElement.clientHeight;
           $('body').css({'height':iosWXH});
-        },2000)
+        },200)
       }
     }
     if(this.$store.state.tag){

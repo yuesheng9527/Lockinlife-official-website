@@ -309,9 +309,9 @@ export default {
           box-sizing: border-box;
           width: 720px;
           border-radius: 50px;
-          padding: 10px;
+          padding: 17px;
           line-height: 1.7;
-          font-size: 27px;
+          font-size: 26px;
           color: #333333;
         }
       }
