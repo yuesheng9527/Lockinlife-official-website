@@ -493,9 +493,9 @@ export default {
           ease: "ease", //string|function 过渡曲线动画，详见下方说明
           transition: "flip3dY", //string|function转场方式，详见下方说明
           freeze: false, //bool 是否冻结页面（冻结后不可响应用户操作，可以通过 `.freeze(false)` 方法来解冻）
-          mouse: true, //bool 是否启用鼠标拖拽
-          mousewheel: true, //bool 是否启用鼠标滚轮切换
-          arrowkey: true, //bool 是否启用键盘方向切换
+          mouse: false, //bool 是否启用鼠标拖拽
+          mousewheel: false, //bool 是否启用鼠标滚轮切换
+          arrowkey: false, //bool 是否启用键盘方向切换
           autoplay: false, //bool 是否自动播放幻灯 新增
           interval: 0 //bool 幻灯播放时间间隔 新增
         });
