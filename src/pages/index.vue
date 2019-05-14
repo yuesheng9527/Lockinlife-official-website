@@ -14,6 +14,8 @@
           <li @click="$router.push({ path: '/profile.html'})">关于我们</li>
         </ul>
       </van-popup>
+      <img src="../images/houtui.png" alt="" class="img124578">
+      <img src="../images/qianjin.png" alt="" class="img784512">
       <div id="index_div">
         <div class="index_div1">
           <div class="header">
@@ -485,12 +487,16 @@ export default {
           autoplay: false, //bool 是否自动播放幻灯 新增
           interval: 0 //bool 幻灯播放时间间隔 新增
         });
-        pw.prev();
-        pw.next();
-        let a = document.getElementsByClassName("next");
+        let a = document.getElementsByClassName("img784512");
         for (let i = 0; i < a.length; i++) {
           a[i].addEventListener("click", () => {
             pw.next();
+          });
+        }
+        let b = document.getElementsByClassName("img124578");
+        for (let i = 0; i < b.length; i++) {
+          b[i].addEventListener("click", () => {
+            pw.prev();
           });
         }
       } else {
@@ -531,6 +537,20 @@ export default {
 <style lang="scss">
 :root {
   --y: 1px;
+}
+.img124578{
+  position: absolute;
+  top:44%;
+  width: 66px;
+  left: -10px;
+  z-index: 1000;
+}
+.img784512{
+  position: absolute;
+  top:44%;
+  width: 66px;
+  right: -10px;
+  z-index: 1000;
 }
 #ai,
 #ai1,
