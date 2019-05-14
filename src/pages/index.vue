@@ -577,13 +577,13 @@ export default {
     }
   }
   .header2 {
-    height: 87%;
+    height: 85%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     .index_img3 {
-      height: 48%;
-      margin: 10% auto 0%;
+      height: 45%;
+      margin: 8% auto -3%;
       transform: translateX(-61px);
     }
     .index_div6 {
@@ -610,14 +610,15 @@ export default {
       height: 8%;
       text-align: center;
       img {
-        margin: 2% 30px;
+        margin: -2% 30px;
         width: 200px;
-        height: 75%;
+        height: 78%;
       }
     }
     .index_div9 {
       height: 10%;
       margin-top: 3%;
+      transform: translateY(-51.5%);
       text-align: center;
       .div1 {
         display: flex;
