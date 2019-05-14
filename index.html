@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./static/css/reset.css">
   <script>
     // document.oncontextmenu=function(){return false;}; 
-    document.onselectstart=function(){return false;};
+    document.onselectstart = function () { return false; };
     function IsPC() {
       let userAgentInfo = navigator.userAgent;
       let Agents = ["Android", "iPhone",
@@ -25,13 +25,14 @@
     }
     let flag = IsPC();
     localStorage.setItem('flag', JSON.stringify(flag));
+    document.body.addEventListener('touchmove', function(e) {
+      e.stopPropagation();
+      e.preventDefault();
+    });
   </script>
   <style>
     ::-webkit-scrollbar {
       display: none;
-    }
-    html{
-      overflow-x: hidden;
     }
   </style>
 </head>

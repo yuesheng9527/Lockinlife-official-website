@@ -542,14 +542,14 @@ export default {
   position: absolute;
   top:44%;
   width: 66px;
-  left: -10px;
+  left: 0px;
   z-index: 1000;
 }
 .img784512{
   position: absolute;
   top:44%;
   width: 66px;
-  right: -10px;
+  right: 0px;
   z-index: 1000;
 }
 #ai,
