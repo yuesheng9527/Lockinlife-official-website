@@ -576,7 +576,7 @@ export default {
     }
   }
   .header2 {
-    height: 85%;
+    height: 89%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
