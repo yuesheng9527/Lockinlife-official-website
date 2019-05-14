@@ -577,13 +577,13 @@ export default {
     }
   }
   .header2 {
-    height: 92%;
+    height: 87%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     .index_img3 {
-      height: 45%;
-      margin: 2.5% auto 3%;
+      height: 48%;
+      margin: 10% auto 0%;
       transform: translateX(-61px);
     }
     .index_div6 {
