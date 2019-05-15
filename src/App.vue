@@ -27,17 +27,7 @@ export default {
       //     evt.preventDefault();
       //   }
       //   }, false);
-      //禁止滚动浏览器
-const prohibitWindow = () => {
-		  var lastTouchEnd = 0;
-		  document.addEventListener('touchend', function(event) {
-		    var now = (new Date()).getTime();
-		    if (now - lastTouchEnd <= 100) {
-		      event.preventDefault();
-		    }
-		    lastTouchEnd = now;
-		  }, false)
-}
+      
       let isIOS= !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
       if(isIOS){
         let ua = navigator.userAgent.toLowerCase();//获取判断用的对象
