@@ -13,10 +13,10 @@
 export default {
   mounted() {
     if(!this.$store.state.tag){
-      document.body.addEventListener('touchmove', function (e) {
-        e.preventDefault() // 阻止默认的处理方式(阻止下拉滑动的效果)
-      }, {passive: false}) // passive 参数不能省略，用来兼容ios和android
-      
+      // document.body.addEventListener('touchmove', function (e) {
+      //   e.preventDefault() // 阻止默认的处理方式(阻止下拉滑动的效果)
+      // }, {passive: false}) // passive 参数不能省略，用来兼容ios和android
+
       let isIOS= !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
       if(isIOS){
         let ua = navigator.userAgent.toLowerCase();//获取判断用的对象
@@ -27,13 +27,6 @@ export default {
             $('html').css({'height':iosWXH});
           },200)       
         }
-        //ios禁止拖动
-        $(document).ready(function(){
-        function stopScrolling(event) {
-        event.preventDefault();
-        }
-        document.addEventListener('touchmove',stopScrolling,false);
-        })
       }
     }
     if(this.$store.state.tag){
