@@ -16,22 +16,22 @@ export default {
       //  document.body.ontouchstart = function(event){
       //       event.preventDefault();
       //  }
-             //阻止左右翻页
-        var xStart, xEnd, yStart, yEnd;
+        //      //阻止左右翻页
+        // var xStart, xEnd, yStart, yEnd;
 
-        document.addEventListener("touchstart", function (evt) {
-            xStart = evt.touches[0].pageX;
-            yStart = evt.touches[0].pageY;
-        }, false);
+        // document.addEventListener("touchstart", function (evt) {
+        //     xStart = evt.touches[0].pageX;
+        //     yStart = evt.touches[0].pageY;
+        // }, false);
 
-         document.addEventListener('touchmove', function (evt) {
-            xEnd = evt.touches[0].pageX;
-            yEnd = evt.touches[0].pageY;
-            //左右滑动
-            if(Math.abs(xStart - xEnd) > Math.abs(yStart - yEnd)){
-                evt.preventDefault();
-            }
-        }, false);
+        //  document.addEventListener('touchmove', function (evt) {
+        //     xEnd = evt.touches[0].pageX;
+        //     yEnd = evt.touches[0].pageY;
+        //     //左右滑动
+        //     if(Math.abs(xStart - xEnd) > Math.abs(yStart - yEnd)){
+        //         evt.preventDefault();
+        //     }
+        // }, false);
             document.body.addEventListener('touchmove', function (e) {
         e.preventDefault() // 阻止默认的处理方式(阻止下拉滑动的效果)
     }, {passive: false}) // passive 参数不能省略，用来兼容ios和android
