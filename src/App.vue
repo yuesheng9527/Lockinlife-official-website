@@ -13,20 +13,24 @@
 export default {
   mounted() {
     if(!this.$store.state.tag){
-      // //阻止左右翻页
-      // var xStart, xEnd, yStart, yEnd;
-      // document.addEventListener("touchstart", function (evt) {
-      //   xStart = evt.touches[0].pageX;
-      //   yStart = evt.touches[0].pageY;
-      // }, false);
-      // document.addEventListener('touchmove', function (evt) {
-      //   xEnd = evt.touches[0].pageX;
-      //   yEnd = evt.touches[0].pageY;
-      //   //左右滑动
-      //   if(Math.abs(xStart - xEnd) > Math.abs(yStart - yEnd)){
-      //     evt.preventDefault();
-      //   }
-      //   }, false);
+      
+var startX,startY;
+ 
+document.addEventListener("touchstart",function(e){
+ 
+    startX = e.touchList[0].pageX;
+    startY = e.touchList[0].pageY;
+});
+ 
+document.addEventListener("touchmove",function(e){
+ 
+    var moveX = e.touchList[0].pageX;
+    var moveY = e.touchList[0].pageY;
+    
+    if(Math.abs(moveX-startX)>Math.abs(moveY-startY)){
+        e.preventDefault();
+    }
+});
       
       let isIOS= !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
       if(isIOS){
