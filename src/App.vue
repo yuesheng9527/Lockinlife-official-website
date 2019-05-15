@@ -13,6 +13,21 @@
 export default {
   mounted() {
     if(!this.$store.state.tag){
+      //阻止左右翻页
+      var xStart, xEnd, yStart, yEnd;
+      document.addEventListener("touchstart", function (evt) {
+        xStart = evt.touches[0].pageX;
+        yStart = evt.touches[0].pageY;
+      }, false);
+      document.addEventListener('touchmove', function (evt) {
+        xEnd = evt.touches[0].pageX;
+        yEnd = evt.touches[0].pageY;
+        //左右滑动
+        if(Math.abs(xStart - xEnd) > Math.abs(yStart - yEnd)){
+          evt.preventDefault();
+        }
+        }, false);
+      
       let isIOS= !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
       if(isIOS){
         let ua = navigator.userAgent.toLowerCase();//获取判断用的对象
