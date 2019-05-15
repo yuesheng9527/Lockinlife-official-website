@@ -13,24 +13,9 @@
 export default {
   mounted() {
     if(!this.$store.state.tag){
-      
-var startX,startY;
- 
-document.addEventListener("touchstart",function(e){
- 
-    startX = e.touchList[0].pageX;
-    startY = e.touchList[0].pageY;
-});
- 
-document.addEventListener("touchmove",function(e){
- 
-    var moveX = e.touchList[0].pageX;
-    var moveY = e.touchList[0].pageY;
-    
-    if(Math.abs(moveX-startX)>Math.abs(moveY-startY)){
-        e.preventDefault();
-    }
-});
+       document.body.ontouchstart = function(event){
+            event.preventDefault();
+       }
       
       let isIOS= !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
       if(isIOS){
