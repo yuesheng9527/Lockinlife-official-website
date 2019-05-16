@@ -1,6 +1,6 @@
 <template>
   <div id="ai">
-    <div id="ai1" v-if="!$store.state.tag" @touchmove.prevent>
+    <div id="ai1" v-if="!$store.state.tag">
       <van-popup class="van-popup" v-model="show">
         <ul>
           <li
